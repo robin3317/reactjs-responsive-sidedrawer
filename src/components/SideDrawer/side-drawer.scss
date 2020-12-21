@@ -1,0 +1,44 @@
+.side-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  height: 100vh;
+  box-shadow: 1px 0 7px rgba(#000, 0.3);
+  width: 65%;
+  max-width: 35rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  transform: translateX(-105%);
+  transition: transform 0.35s ease-out;
+
+  .brand {
+    font-size: 2rem;
+    font-weight: 500;
+    // margin-top if you use cross icon to close side drawer, otherwise don't
+    // need to use
+    margin-top: 0.8rem;
+  }
+
+  ul {
+    li {
+      list-style: none;
+      margin: 1rem 0;
+      font-size: 1.4rem;
+    }
+  }
+
+  .close {
+    font-size: 1.4rem;
+    position: absolute;
+    top: 0.8rem;
+    right: 0.8rem;
+  }
+}
+
+.show {
+  transform: translateX(0%);
+}

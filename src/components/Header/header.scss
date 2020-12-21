@@ -1,0 +1,39 @@
+@import '../../media-query.scss';
+
+.header {
+  font-size: 1.4rem;
+  background-color: #2e3094;
+  height: 4rem;
+  padding: 0 1.7rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+
+    @include respond(phone-md-lg) {
+      display: none;
+    }
+
+    .brand {
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+
+    .nav {
+      ul {
+        display: flex;
+
+        li {
+          list-style: none;
+          margin-left: 2rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

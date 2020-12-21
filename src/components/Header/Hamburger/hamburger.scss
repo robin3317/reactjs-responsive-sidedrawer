@@ -1,0 +1,46 @@
+@import '../../../media-query.scss';
+
+.hamburger {
+  background-color: #2e3094;
+  height: 3.6rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  @include respond(tab-port) {
+    display: none;
+  }
+  @include respond(tab-land) {
+    display: none;
+  }
+
+  @include respond(all-desktop) {
+    display: none;
+  }
+
+  .line-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .line {
+    height: 3px;
+    width: 22px;
+    background-color: #fff;
+    margin: 2px 0;
+  }
+
+  .nav {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+
+    .brand {
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+  }
+}

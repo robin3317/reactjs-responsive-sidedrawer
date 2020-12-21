@@ -1,0 +1,65 @@
+/*
+MEDIA QUERY MANAGER
+0 - 375px:      Phone-md
+375 - 600px:    Phone-lg
+600 - 900px:    Tablet Portrait
+900 - 1200px:   Tablet Landscape
+1200 - 1800px:  Is Where Our Normal Styles Apply
+1800px +:       Big Desktop
+BREAKPOINT ARGUMENT CHOICE
+- phone-md
+- phone-lg
+- tab-port
+- tab-land
+- big-desktop
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone-md {
+    @media (max-width: 23.4375em) {
+      @content;
+    } // 375px
+  }
+
+  @if $breakpoint == phone-lg {
+    @media (min-width: 23.5em) and (max-width: 37.5em) {
+      @content;
+    } // 376px to 600px
+  }
+
+  @if $breakpoint == phone-md-lg {
+    @media (min-width: 0em) and (max-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media (min-width: 37.5625em) and (max-width: 56.25em) {
+      @content;
+    } // 601px to 900px
+  }
+
+  @if $breakpoint == tab-land {
+    @media (min-width: 56.3125em) and (max-width: 75em) {
+      @content;
+    } // 901px to 1200px
+  }
+
+  @if $breakpoint == desktop {
+    @media (min-width: 75.0625em) and (max-width: 90em) {
+      @content;
+    } // 1201px to 1800px
+  }
+
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content;
+    } // 1800px
+  }
+
+  @if $breakpoint == all-desktop {
+    @media (min-width: 75.0625em) and (max-width: 250em) {
+      @content;
+    } // 1201px to upper
+  }
+}

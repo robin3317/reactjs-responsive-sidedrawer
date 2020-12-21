@@ -1,0 +1,13 @@
+.base-layout {
+  min-height: 70vh;
+  font-size: 1.4rem;
+
+  // temporary styles
+  padding: 1rem 2rem;
+}
+
+.content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
